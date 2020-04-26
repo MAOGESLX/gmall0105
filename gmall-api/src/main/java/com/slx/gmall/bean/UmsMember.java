@@ -1,186 +1,218 @@
 package com.slx.gmall.bean;
 
-
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
+public class UmsMember implements Serializable{
 
-public class UmsMember {
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Integer id;
-        private Integer memberLevelId;
-        private String username;
-        private String password;
-        private String nickname;
-        private String phone;
-        private Integer status;
-        private Date createTime;
-        private String icon;
-        private Integer gender;
-        private Date birthday;
-        private String city;
-        private String job;
-        private String personalizedSignature;
-        private Integer sourceType;
-        private Integer integration;
-        private Integer growth;
-        private Integer luckeyCount;
-        private Integer historyIntegration;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+    private String memberLevelId;
+    private String username;
+    private String password;
+    private String nickname;
+    private String phone;
+    private int status;
+    private Date createTime;
+    private String icon;
+    private String gender;
+    private Date birthday;
+    private String city;
+    private String job;
+    private String personalizedSignature;
+    private String sourceType;
+    private int integration;
+    private int growth;
+    private int luckeyCount;
+    private int historyIntegration;
+    private String sourceUid;
+    private String accessToken;
+    private String accessCode;
 
-        public Integer getId() {
-                return id;
-        }
+    public String getGender() {
+        return gender;
+    }
 
-        public void setId(Integer id) {
-                this.id = id;
-        }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
-        public Integer getMemberLevelId() {
-                return memberLevelId;
-        }
+    public String getSourceType() {
+        return sourceType;
+    }
 
-        public void setMemberLevelId(Integer memberLevelId) {
-                this.memberLevelId = memberLevelId;
-        }
+    public void setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+    }
 
-        public String getUsername() {
-                return username;
-        }
+    public String getSourceUid() {
+        return sourceUid;
+    }
 
-        public void setUsername(String username) {
-                this.username = username;
-        }
+    public void setSourceUid(String sourceUid) {
+        this.sourceUid = sourceUid;
+    }
 
-        public String getPassword() {
-                return password;
-        }
+    public String getAccessToken() {
+        return accessToken;
+    }
 
-        public void setPassword(String password) {
-                this.password = password;
-        }
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
 
-        public String getNickname() {
-                return nickname;
-        }
+    public String getAccessCode() {
+        return accessCode;
+    }
 
-        public void setNickname(String nickname) {
-                this.nickname = nickname;
-        }
+    public void setAccessCode(String accessCode) {
+        this.accessCode = accessCode;
+    }
 
-        public String getPhone() {
-                return phone;
-        }
+    public String getId() {
+        return id;
+    }
 
-        public void setPhone(String phone) {
-                this.phone = phone;
-        }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-        public Integer getStatus() {
-                return status;
-        }
+    public String getMemberLevelId() {
+        return memberLevelId;
+    }
 
-        public void setStatus(Integer status) {
-                this.status = status;
-        }
+    public void setMemberLevelId(String memberLevelId) {
+        this.memberLevelId = memberLevelId;
+    }
 
-        public Date getCreateTime() {
-                return createTime;
-        }
+    public String getUsername() {
+        return username;
+    }
 
-        public void setCreateTime(Date createTime) {
-                this.createTime = createTime;
-        }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-        public String getIcon() {
-                return icon;
-        }
+    public String getPassword() {
+        return password;
+    }
 
-        public void setIcon(String icon) {
-                this.icon = icon;
-        }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-        public Integer getGender() {
-                return gender;
-        }
+    public String getNickname() {
+        return nickname;
+    }
 
-        public void setGender(Integer gender) {
-                this.gender = gender;
-        }
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
-        public Date getBirthday() {
-                return birthday;
-        }
+    public String getPhone() {
+        return phone;
+    }
 
-        public void setBirthday(Date birthday) {
-                this.birthday = birthday;
-        }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
-        public String getCity() {
-                return city;
-        }
+    public int getStatus() {
+        return status;
+    }
 
-        public void setCity(String city) {
-                this.city = city;
-        }
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
-        public String getJob() {
-                return job;
-        }
+    public Date getCreateTime() {
+        return createTime;
+    }
 
-        public void setJob(String job) {
-                this.job = job;
-        }
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
-        public String getPersonalizedSignature() {
-                return personalizedSignature;
-        }
+    public String getIcon() {
+        return icon;
+    }
 
-        public void setPersonalizedSignature(String personalizedSignature) {
-                this.personalizedSignature = personalizedSignature;
-        }
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
-        public Integer getSourceType() {
-                return sourceType;
-        }
 
-        public void setSourceType(Integer sourceType) {
-                this.sourceType = sourceType;
-        }
+    public Date getBirthday() {
+        return birthday;
+    }
 
-        public Integer getIntegration() {
-                return integration;
-        }
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
-        public void setIntegration(Integer integration) {
-                this.integration = integration;
-        }
+    public String getCity() {
+        return city;
+    }
 
-        public Integer getGrowth() {
-                return growth;
-        }
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-        public void setGrowth(Integer growth) {
-                this.growth = growth;
-        }
+    public String getJob() {
+        return job;
+    }
 
-        public Integer getLuckeyCount() {
-                return luckeyCount;
-        }
+    public void setJob(String job) {
+        this.job = job;
+    }
 
-        public void setLuckeyCount(Integer luckeyCount) {
-                this.luckeyCount = luckeyCount;
-        }
+    public String getPersonalizedSignature() {
+        return personalizedSignature;
+    }
 
-        public Integer getHistoryIntegration() {
-                return historyIntegration;
-        }
+    public void setPersonalizedSignature(String personalizedSignature) {
+        this.personalizedSignature = personalizedSignature;
+    }
 
-        public void setHistoryIntegration(Integer historyIntegration) {
-                this.historyIntegration = historyIntegration;
-        }
+
+    public int getIntegration() {
+        return integration;
+    }
+
+    public void setIntegration(int integration) {
+        this.integration = integration;
+    }
+
+    public int getGrowth() {
+        return growth;
+    }
+
+    public void setGrowth(int growth) {
+        this.growth = growth;
+    }
+
+    public int getLuckeyCount() {
+        return luckeyCount;
+    }
+
+    public void setLuckeyCount(int luckeyCount) {
+        this.luckeyCount = luckeyCount;
+    }
+
+    public int getHistoryIntegration() {
+        return historyIntegration;
+    }
+
+    public void setHistoryIntegration(int historyIntegration) {
+        this.historyIntegration = historyIntegration;
+    }
+
+
+
+
+
 }
-

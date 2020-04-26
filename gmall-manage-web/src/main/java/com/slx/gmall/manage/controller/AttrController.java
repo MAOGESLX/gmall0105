@@ -28,10 +28,13 @@ public class AttrController  {
         return pmsBaseSaleAttrs;
     }
 
+
     @RequestMapping("saveAttrInfo")
     @ResponseBody
     public String saveAttrInfo(@RequestBody PmsBaseAttrInfo pmsBaseAttrInfo){
+
         String success = attrService.saveAttrInfo(pmsBaseAttrInfo);
+
         return "success";
     }
 
@@ -50,5 +53,4 @@ public class AttrController  {
         List<PmsBaseAttrValue> pmsBaseAttrValues = attrService.getAttrValueList(attrId);
         return pmsBaseAttrValues;
     }
-
 }
