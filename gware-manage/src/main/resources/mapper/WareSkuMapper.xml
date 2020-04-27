@@ -6,7 +6,7 @@
       FROM ware_sku ws INNER JOIN ware_info wi
         ON ws.warehouse_id=wi.id
     </select>
-    <resultMap id="wareSkuMap" type="com.atguigu.gware.bean.WareSku" autoMapping="true">
+    <resultMap id="wareSkuMap" type="com.slx.gware.bean.WareSku" autoMapping="true">
         <result property="id" column="id" ></result>
     </resultMap>
 
